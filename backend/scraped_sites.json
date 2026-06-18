@@ -1,0 +1,101 @@
+{
+  "scraped_sites": [
+    {
+      "city": "Lucknow",
+      "authority": "LDA (Lucknow Development Authority)",
+      "urls": [
+        "https://www.ldalucknow.in?utm_source=chatgpt.com",
+        "https://registration.ldalucknow.in?utm_source=chatgpt.com"
+      ]
+    },
+    {
+      "city": "UP",
+      "authority": "UPEIDA",
+      "urls": [
+        "https://upeida.up.gov.in?utm_source=chatgpt.com"
+      ]
+    },
+    {
+      "city": "UP",
+      "authority": "Invest UP & Nivesh Mitra",
+      "urls": [
+        "https://invest.up.gov.in?utm_source=chatgpt.com",
+        "https://niveshmitra.up.nic.in?utm_source=chatgpt.com"
+      ]
+    },
+    {
+      "city": "UP",
+      "authority": "UP Housing Department & UP Awas Vikas Parishad",
+      "urls": [
+        "https://upavp.in?utm_source=chatgpt.com",
+        "https://housing.up.nic.in?utm_source=chatgpt.com"
+      ]
+    },
+    {
+      "city": "UP",
+      "authority": "UP e-Tender & Government e Marketplace",
+      "urls": [
+        "https://etender.up.nic.in?utm_source=chatgpt.com",
+        "https://gem.gov.in?utm_source=chatgpt.com"
+      ]
+    },
+    {
+      "city": "India",
+      "authority": "NHAI & Smart Cities Mission",
+      "urls": [
+        "https://nhai.gov.in?utm_source=chatgpt.com",
+        "https://smartcities.gov.in?utm_source=chatgpt.com"
+      ]
+    },
+    {
+      "city": "Lucknow",
+      "authority": "Lucknow Municipal Corporation",
+      "urls": [
+        "https://lmc.up.nic.in?utm_source=chatgpt.com"
+      ]
+    },
+    {
+      "city": "UP",
+      "authority": "UP Metro Rail Corporation",
+      "urls": [
+        "https://upmetrorail.com?utm_source=chatgpt.com"
+      ]
+    },
+    {
+      "city": "India / UP",
+      "authority": "Industrial & Freight Corridors",
+      "urls": [
+        "https://dfccil.com?utm_source=chatgpt.com",
+        "https://dpiit.gov.in?utm_source=chatgpt.com",
+        "https://defencecorridor.up.gov.in?utm_source=chatgpt.com"
+      ]
+    },
+    {
+      "city": "Lucknow / UP",
+      "authority": "Private Developers",
+      "urls": [
+        "https://www.shalimarcorp.com?utm_source=chatgpt.com",
+        "https://www.omaxe.com?utm_source=chatgpt.com",
+        "https://www.eldecogroup.com?utm_source=chatgpt.com",
+        "https://www.ansalapi.com?utm_source=chatgpt.com",
+        "https://www.paarthinfrabuild.com?utm_source=chatgpt.com"
+      ]
+    },
+    {
+      "city": "UP",
+      "authority": "UP Land Records (Bhulekh & BhuNaksha) & RERA",
+      "urls": [
+        "https://www.up-rera.in?utm_source=chatgpt.com",
+        "https://upbhunaksha.gov.in?utm_source=chatgpt.com",
+        "https://upbhulekh.gov.in?utm_source=chatgpt.com"
+      ]
+    },
+    {
+      "city": "India",
+      "authority": "National Infrastructure Pipeline",
+      "urls": [
+        "https://www.nipindia.gov.in?utm_source=chatgpt.com"
+      ]
+    }
+  ]
+}
