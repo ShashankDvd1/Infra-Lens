@@ -92,6 +92,13 @@ async def summarise_all_projects():
         projects = (await session.execute(stmt)).scalars().all()
         
         for p in projects:
+            # Skip if summary already exists
+            summ_stmt = select(AISummary).where(AISummary.project_id == p.id)
+            existing_summ = (await session.execute(summ_stmt)).scalar_one_or_none()
+            if existing_summ:
+                print(f"Summary for {p.name} already exists. Skipping.")
+                continue
+                
             try:
                 await generate_project_summary(session, p)
                 print(f"✅ Generated summary for {p.name}")

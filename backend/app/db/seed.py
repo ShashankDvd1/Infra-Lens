@@ -123,6 +123,59 @@ async def seed_data():
                 )
                 session.add(source)
 
+        # 3. Seed Distress Properties
+        from app.models.distress import DistressProperty
+        print("Seeding Distress Properties...")
+        distress_data = [
+            {
+                "title": "Omaxe Residency Unit 4B",
+                "location": "Gomti Nagar Extension, Lucknow",
+                "city": "Lucknow",
+                "property_type": "Bank Auction",
+                "market_value": 8500000.0,
+                "reserve_price": 6200000.0,
+                "discount": 27.0,
+                "auction_date": "2026-07-15",
+                "project_slug": "lucknow-it-city-chak-ganjaria"
+            },
+            {
+                "title": "Commercial Plot, Phase 2",
+                "location": "Shaheed Path Corridor, Lucknow",
+                "city": "Lucknow",
+                "property_type": "Distress Sale",
+                "market_value": 12000000.0,
+                "reserve_price": 9500000.0,
+                "discount": 21.0,
+                "auction_date": "Immediate",
+                "project_slug": "lucknow-outer-ring-road"
+            }
+        ]
+
+        for dp_data in distress_data:
+            # Check if exists
+            result = await session.execute(select(DistressProperty).where(DistressProperty.title == dp_data["title"]))
+            if result.first():
+                print(f"Distress Property {dp_data['title']} already exists. Skipping.")
+                continue
+
+            # Link project
+            proj_result = await session.execute(select(Project).where(Project.slug == dp_data["project_slug"]))
+            proj_row = proj_result.first()
+            project_id = proj_row[0].id if proj_row else None
+
+            dp = DistressProperty(
+                title=dp_data["title"],
+                location=dp_data["location"],
+                city=dp_data["city"],
+                property_type=dp_data["property_type"],
+                market_value=dp_data["market_value"],
+                reserve_price=dp_data["reserve_price"],
+                discount=dp_data["discount"],
+                auction_date=dp_data["auction_date"],
+                project_id=project_id
+            )
+            session.add(dp)
+
         await session.commit()
         print("Seed data successfully loaded!")
 

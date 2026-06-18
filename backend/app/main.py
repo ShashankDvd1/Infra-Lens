@@ -82,11 +82,16 @@ def create_app() -> FastAPI:
         tags=["Users"],
     )
     
-    from app.api.v1 import alerts
+    from app.api.v1 import alerts, distress
     app.include_router(
         alerts.router,
         prefix=f"{settings.API_V1_PREFIX}/alerts",
         tags=["Alerts"],
+    )
+    app.include_router(
+        distress.router,
+        prefix=f"{settings.API_V1_PREFIX}/distress",
+        tags=["Distress"],
     )
 
     @app.get("/health", tags=["Health"])

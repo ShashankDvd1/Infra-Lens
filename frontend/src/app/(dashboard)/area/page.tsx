@@ -3,22 +3,32 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Compass, TrendingUp, MapPin, Search } from "lucide-react";
-import { fetchAPI } from "@/lib/api";
+import { getAreas } from "@/lib/api";
 
 export default function AreaIntelligencePage() {
   const [areas, setAreas] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Mock fetch for now, we would normally hit /api/v1/areas
-    setTimeout(() => {
-      setAreas([
-        { id: "1", name: "Gomti Nagar Extension", city: "Lucknow", score: 85, growth: 18.0, price: 3800 },
-        { id: "2", name: "Shaheed Path Corridor", city: "Lucknow", score: 78, growth: 15.0, price: 4200 },
-        { id: "3", name: "Kanpur Road", city: "Lucknow", score: 62, growth: 10.0, price: 2800 },
-      ]);
-      setLoading(false);
-    }, 1000);
+    async function loadAreas() {
+      try {
+        const data = await getAreas({ city: "Lucknow" });
+        const mapped = (data.items || []).map((a: any) => ({
+          id: a.slug,
+          name: a.name,
+          city: a.city,
+          score: Math.round(a.growth_rate_pct * 4 + 10),
+          growth: a.growth_rate_pct,
+          price: a.avg_price_sqft
+        }));
+        setAreas(mapped);
+      } catch (err) {
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    loadAreas();
   }, []);
 
   return (

@@ -23,3 +23,4 @@ from app.schemas.ai import (
     RecommendedArea,
     SummaryGenerateRequest,
 )
+from app.schemas.distress import DistressPropertyResponse

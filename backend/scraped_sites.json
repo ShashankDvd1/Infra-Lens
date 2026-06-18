@@ -97,5 +97,122 @@
         "https://www.nipindia.gov.in?utm_source=chatgpt.com"
       ]
     }
+  ],
+  "distress_scraped_sites": [
+    {
+      "source": "BAANKNET",
+      "url": "https://baanknet.com?utm_source=chatgpt.com",
+      "data_type": "Bank NPAs, foreclosures, auctions"
+    },
+    {
+      "source": "MSTC e-Auction",
+      "url": "https://www.mstcecommerce.com/auctionhome/ibapi/index.jsp?utm_source=chatgpt.com",
+      "data_type": "PSU bank auctions"
+    },
+    {
+      "source": "IBAPI",
+      "url": "https://www.ibapi.in?utm_source=chatgpt.com",
+      "data_type": "Aggregated PSU bank auction listings"
+    },
+    {
+      "source": "Bankeauctions",
+      "url": "https://www.bankeauctions.com?utm_source=chatgpt.com",
+      "data_type": "Bank foreclosure properties"
+    },
+    {
+      "source": "C1 India Auctions",
+      "url": "https://www.c1india.com?utm_source=chatgpt.com",
+      "data_type": "Private bank & NBFC auctions"
+    },
+    {
+      "source": "eBKray",
+      "url": "https://www.ebkray.com?utm_source=chatgpt.com",
+      "data_type": "SARFAESI auctions"
+    },
+    {
+      "source": "DRT e-Auctions",
+      "url": "https://drt.gov.in?utm_source=chatgpt.com",
+      "data_type": "Recovery proceedings"
+    },
+    {
+      "source": "Insolvency Portal",
+      "url": "https://www.ibbi.gov.in?utm_source=chatgpt.com",
+      "data_type": "NCLT / insolvency assets"
+    },
+    {
+      "source": "eAuction India",
+      "url": "https://www.eauctionindia.co.in?utm_source=chatgpt.com",
+      "data_type": "Auction Listings"
+    },
+    {
+      "source": "Hecta",
+      "url": "https://hectahq.com?utm_source=chatgpt.com",
+      "data_type": "Auction Listings"
+    },
+    {
+      "source": "BharatAssetz",
+      "url": "https://www.bharatassetz.com?utm_source=chatgpt.com",
+      "data_type": "Auction Listings"
+    },
+    {
+      "source": "XpertARC",
+      "url": "https://xpertarc.com?utm_source=chatgpt.com",
+      "data_type": "Auction Listings"
+    },
+    {
+      "source": "BankAuctionDeals",
+      "url": "https://bankauctiondeals.com?utm_source=chatgpt.com",
+      "data_type": "Auction Listings"
+    },
+    {
+      "source": "GeM Auctions",
+      "url": "https://gem.gov.in?utm_source=chatgpt.com",
+      "data_type": "Government e-Marketplace"
+    },
+    {
+      "source": "MSTC Property Auctions",
+      "url": "https://www.mstcecommerce.com?utm_source=chatgpt.com",
+      "data_type": "MSTC"
+    },
+    {
+      "source": "NCLT",
+      "url": "https://nclt.gov.in?utm_source=chatgpt.com",
+      "data_type": "National Company Law Tribunal"
+    },
+    {
+      "source": "Official Liquidator",
+      "url": "https://www.mca.gov.in?utm_source=chatgpt.com",
+      "data_type": "Official Liquidator Services"
+    },
+    {
+      "source": "SEBI Recovery Auctions",
+      "url": "https://www.sebi.gov.in?utm_source=chatgpt.com",
+      "data_type": "SEBI"
+    },
+    {
+      "source": "LDA",
+      "url": "https://www.ldalucknow.in?utm_source=chatgpt.com",
+      "data_type": "Lucknow Development Authority"
+    },
+    {
+      "source": "UP RERA",
+      "url": "https://www.up-rera.in?utm_source=chatgpt.com",
+      "data_type": "UP RERA"
+    },
+    {
+      "source": "UP eTender",
+      "url": "https://etender.up.nic.in?utm_source=chatgpt.com",
+      "data_type": "UP eTender Portal"
+    },
+    {
+      "source": "UP Bhulekh",
+      "url": "https://upbhulekh.gov.in?utm_source=chatgpt.com",
+      "data_type": "UP Bhulekh"
+    },
+    {
+      "source": "BhuNaksha UP",
+      "url": "https://upbhunaksha.gov.in?utm_source=chatgpt.com",
+      "data_type": "BhuNaksha UP"
+    }
   ]
 }

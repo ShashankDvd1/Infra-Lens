@@ -36,3 +36,16 @@ class AskAIResponse(BaseModel):
 
 class SummaryGenerateRequest(BaseModel):
     project_id: UUID
+
+
+class InvestRecommendationRequest(BaseModel):
+    budget: float = Field(..., description="Budget in Lakhs")
+    risk: str = Field(..., description="Risk tolerance: low, moderate, high")
+
+
+class InvestRecommendationResponse(BaseModel):
+    strategy: str
+    target_areas: list[str]
+    expected_roi: str
+    rationale: str
+    backed_projects: list[dict] = []

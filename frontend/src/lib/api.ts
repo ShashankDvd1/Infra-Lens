@@ -79,3 +79,23 @@ export const askAI = (query: string) => {
     body: JSON.stringify({ query }),
   });
 };
+
+export const getInvestmentRecommendation = (budget: number, risk: string) => {
+  return fetchAPI(`/ai/recommend`, {
+    method: 'POST',
+    body: JSON.stringify({ budget, risk }),
+  });
+};
+
+export const getAreas = (params?: { city?: string; page?: number }) => {
+  const queryParams = new URLSearchParams();
+  if (params?.city) queryParams.append('city', params.city);
+  if (params?.page) queryParams.append('page', params.page.toString());
+
+  const queryString = queryParams.toString() ? `?${queryParams.toString()}` : '';
+  return fetchAPI(`/areas${queryString}`);
+};
+
+export const getDistressProperties = () => {
+  return fetchAPI(`/distress`);
+};

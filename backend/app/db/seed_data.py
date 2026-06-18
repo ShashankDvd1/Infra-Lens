@@ -290,6 +290,266 @@ SEED_PROJECTS = [
             }
         ]
     },
+    {
+        "name": "Lucknow Metro East-West Corridor",
+        "slug": "lucknow-metro-east-west-corridor",
+        "project_type": "metro",
+        "status": "approved",
+        "description": "New metro line connecting Charbagh to Vasant Kunj with 12 stations (7 underground and 5 elevated), covering 11.16 km to connect old city areas to the western suburbs.",
+        "latitude": 26.8550,
+        "longitude": 80.9150,
+        "city": "Lucknow",
+        "district": "Lucknow",
+        "authority": "Lucknow Metro Rail Corporation (LMRC)",
+        "announced_date": "2024-02-15",
+        "expected_completion": "2029-12-31",
+        "budget_crore": 5800.0,
+        "impact_radius_km": 3.0,
+        "sources": [
+            {
+                "source_type": "authority_website",
+                "title": "LMRC — East-West Corridor DPR Details",
+                "url": "https://lmrcl.com/east-west-corridor",
+                "authority_name": "LMRC",
+                "published_date": "2024-02-15",
+                "content_text": "LMRC has finalized the DPR for the East-West corridor connecting Charbagh to Vasant Kunj. The project is awaiting final central cabinet approval."
+            }
+        ]
+    },
+    {
+        "name": "Udyog Nagar Expansion — Industrial Corridor",
+        "slug": "udyog-nagar-expansion",
+        "project_type": "township",
+        "status": "announced",
+        "description": "A 5,610-acre industrial and urban expansion project located along the Agra Expressway designed under the Mukhyamantri Shahri Vistarikaran Yojana.",
+        "latitude": 26.8650,
+        "longitude": 80.8200,
+        "city": "Lucknow",
+        "district": "Lucknow",
+        "authority": "Lucknow Development Authority (LDA)",
+        "announced_date": "2024-04-10",
+        "expected_completion": "2030-03-31",
+        "budget_crore": 1200.0,
+        "impact_radius_km": 6.0,
+        "sources": [
+            {
+                "source_type": "government_notification",
+                "title": "LDA — Industrial Corridor Land Acquisition Notice",
+                "url": "https://lda.up.gov.in/udyog-nagar",
+                "authority_name": "LDA",
+                "published_date": "2024-04-10",
+                "content_text": "Land acquisition has started for the 5,610-acre industrial township along Agra Expressway. The project will create logistics and warehousing hubs."
+            }
+        ]
+    },
+    {
+        "name": "Lucknow Aerocity — Airport Business District",
+        "slug": "lucknow-aerocity",
+        "project_type": "township",
+        "status": "announced",
+        "description": "A massive 1,500-acre development project near Chaudhary Charan Singh International Airport, featuring commercial offices, convention centers, smart business parks, hotels, and luxury housing.",
+        "latitude": 26.7550,
+        "longitude": 80.8800,
+        "city": "Lucknow",
+        "district": "Lucknow",
+        "authority": "Lucknow Development Authority (LDA)",
+        "announced_date": "2024-05-20",
+        "expected_completion": "2031-12-31",
+        "budget_crore": 4500.0,
+        "impact_radius_km": 5.0,
+        "sources": [
+            {
+                "source_type": "news_article",
+                "title": "LDA to build 1,500-acre Aerocity near Lucknow Airport",
+                "url": "https://lda.up.gov.in/aerocity",
+                "authority_name": "Times of India",
+                "published_date": "2024-05-20",
+                "content_text": "The Lucknow Development Authority has proposed a new Aerocity spread over 1,500 acres near the airport. The zone will feature corporate offices, premium hotels, and residential units."
+            }
+        ]
+    },
+    {
+        "name": "Shalimar One World — Integrated Township",
+        "slug": "shalimar-one-world",
+        "project_type": "township",
+        "status": "under_construction",
+        "description": "A massive premium integrated township project located on Shaheed Path, offering high-end residential apartments, penthouses, commercial malls, clubhouses, and green parks.",
+        "latitude": 26.8250,
+        "longitude": 81.0150,
+        "city": "Lucknow",
+        "district": "Lucknow",
+        "authority": "Private Developer",
+        "announced_date": "2021-06-01",
+        "expected_completion": "2026-12-31",
+        "budget_crore": 2500.0,
+        "impact_radius_km": 2.0,
+        "sources": [
+            {
+                "source_type": "authority_website",
+                "title": "Shalimar Corp — One World Project Details",
+                "url": "https://shalimarcorp.com/oneworld",
+                "authority_name": "Shalimar Corp",
+                "published_date": "2021-06-01",
+                "content_text": "Shalimar One World is a RERA-approved township located on Shaheed Path spanning over 200 acres with lakeside views and high-rise residences."
+            }
+        ]
+    },
+    {
+        "name": "Omaxe Metro City — Raebareli Road Township",
+        "slug": "omaxe-metro-city",
+        "project_type": "township",
+        "status": "under_construction",
+        "description": "A large integrated high-tech township offering a mix of residential plots, modern villas, and mid-rise apartments along the Raebareli Road growth corridor.",
+        "latitude": 26.7300,
+        "longitude": 80.9300,
+        "city": "Lucknow",
+        "district": "Lucknow",
+        "authority": "Private Developer",
+        "announced_date": "2020-03-01",
+        "expected_completion": "2027-06-30",
+        "budget_crore": 1800.0,
+        "impact_radius_km": 3.0,
+        "sources": [
+            {
+                "source_type": "authority_website",
+                "title": "Omaxe Ltd — Metro City Project Information",
+                "url": "https://omaxe.com/metro-city",
+                "authority_name": "Omaxe Ltd",
+                "published_date": "2020-03-01",
+                "content_text": "Omaxe Metro City is an integrated hi-tech township on Raebareli Road with premium plots, villas, and group housing complexes."
+            }
+        ]
+    },
+    {
+        "name": "Rishita Mulberry Heights — Sushant Golf City",
+        "slug": "rishita-mulberry-heights",
+        "project_type": "township",
+        "status": "under_construction",
+        "description": "A luxury gated community apartment project located in Sushant Golf City, featuring 2BHK, 3BHK, and 4BHK apartments surrounded by luxury gardens and modern wellness amenities.",
+        "latitude": 26.7910,
+        "longitude": 81.0250,
+        "city": "Lucknow",
+        "district": "Lucknow",
+        "authority": "Private Developer",
+        "announced_date": "2021-10-01",
+        "expected_completion": "2026-10-31",
+        "budget_crore": 950.0,
+        "impact_radius_km": 1.5,
+        "sources": [
+            {
+                "source_type": "authority_website",
+                "title": "Rishita Developers — Mulberry Heights Details",
+                "url": "https://rishita.in/mulberry-heights",
+                "authority_name": "Rishita Developers",
+                "published_date": "2021-10-01",
+                "content_text": "Mulberry Heights offers 2, 3, and 4 BHK luxury residences spread over 21 acres with 80% open spaces in Sushant Golf City."
+            }
+        ]
+    },
+    {
+        "name": "Oro Constella — Shaheed Path Corridor",
+        "slug": "oro-constella",
+        "project_type": "township",
+        "status": "under_construction",
+        "description": "A premium luxury living high-rise development featuring 3BHK and 4BHK apartments on the Shaheed Path corridor with top-tier club amenities.",
+        "latitude": 26.8120,
+        "longitude": 81.0180,
+        "city": "Lucknow",
+        "district": "Lucknow",
+        "authority": "Private Developer",
+        "announced_date": "2022-12-15",
+        "expected_completion": "2027-12-31",
+        "budget_crore": 650.0,
+        "impact_radius_km": 1.5,
+        "sources": [
+            {
+                "source_type": "authority_website",
+                "title": "Oro Group — Oro Constella Project Specifications",
+                "url": "https://orogroup.in/oro-constella",
+                "authority_name": "Oro Group",
+                "published_date": "2022-12-15",
+                "content_text": "Oro Constella features high-rise residential towers on Shaheed Path with premium interior designs and direct connectivity to commercial districts."
+            }
+        ]
+    },
+    {
+        "name": "Gomti Riverfront Development Project",
+        "slug": "gomti-riverfront-development",
+        "project_type": "other",
+        "status": "completed",
+        "description": "Beautification and channelization of the Gomti River in Lucknow, creating walking paths, cycling tracks, gardens, and fountains over an 8 km stretch.",
+        "latitude": 26.8520,
+        "longitude": 80.9620,
+        "city": "Lucknow",
+        "district": "Lucknow",
+        "authority": "UP Irrigation Department",
+        "announced_date": "2015-04-01",
+        "expected_completion": "2017-10-31",
+        "budget_crore": 650.0,
+        "impact_radius_km": 2.0,
+        "sources": [
+            {
+                "source_type": "government_notification",
+                "title": "UP Irrigation Dept — Riverfront Beautification Project",
+                "url": "https://irrigation.up.gov.in/gomti-riverfront",
+                "authority_name": "UP Irrigation",
+                "published_date": "2015-04-01",
+                "content_text": "Beautification and concrete channel construction along the Gomti River banks to prevent flooding and create public recreation zones in the city center."
+            }
+        ]
+    },
+    {
+        "name": "Lucknow-Gorakhpur Link Expressway",
+        "slug": "lucknow-gorakhpur-link-expressway",
+        "project_type": "expressway",
+        "status": "under_construction",
+        "description": "A 91 km long four-lane wide (expandable to six) expressway connecting Lucknow (via Purvanchal Expressway) with Gorakhpur, accelerating regional commerce.",
+        "latitude": 26.8850,
+        "longitude": 81.0900,
+        "city": "Lucknow",
+        "district": "Lucknow",
+        "authority": "Uttar Pradesh Expressways Industrial Development Authority (UPEIDA)",
+        "announced_date": "2019-11-20",
+        "expected_completion": "2026-10-31",
+        "budget_crore": 5800.0,
+        "impact_radius_km": 8.0,
+        "sources": [
+            {
+                "source_type": "government_notification",
+                "title": "UPEIDA — Gorakhpur Link Expressway Details",
+                "url": "https://defencecorridor.up.gov.in/gorakhpur-link",
+                "authority_name": "UPEIDA",
+                "published_date": "2019-11-20",
+                "content_text": "The Gorakhpur Link Expressway spans 91.35 km connecting Jaitpur in Gorakhpur to Salarpur in Azamgarh on the Purvanchal Expressway."
+            }
+        ]
+    },
+    {
+        "name": "Chak Ganjaria Cancer Institute and Hospital",
+        "slug": "cg-city-cancer-institute",
+        "project_type": "wellness_city",
+        "status": "completed",
+        "description": "State-of-the-art super-specialty cancer institute and medical university in Chak Ganjaria (CG City), offering comprehensive oncology care and research facilities.",
+        "latitude": 26.8150,
+        "longitude": 81.0320,
+        "city": "Lucknow",
+        "district": "Lucknow",
+        "authority": "Department of Medical Education, UP",
+        "announced_date": "2016-03-15",
+        "expected_completion": "2020-12-25",
+        "budget_crore": 1000.0,
+        "impact_radius_km": 3.0,
+        "sources": [
+            {
+                "source_type": "government_notification",
+                "title": "UP Dept of Medical Education — CG City Cancer Hospital",
+                "url": "https://invest.up.gov.in/cg-city-cancer-hospital",
+                "authority_name": "UP Govt",
+                "published_date": "2016-03-15",
+                "content_text": "The Kalyan Singh Super Specialty Cancer Institute at CG City spans 100 acres and offers top-tier oncology research and treatment services."
+            }
+        ]
+    }
 ]
 
 

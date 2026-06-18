@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Bot, ChevronRight, CheckCircle2, TrendingUp } from "lucide-react";
 import Link from "next/link";
+import { getInvestmentRecommendation } from "@/lib/api";
 
 export default function InvestmentAssistantPage() {
   const [step, setStep] = useState(1);
@@ -11,19 +12,18 @@ export default function InvestmentAssistantPage() {
   const [loading, setLoading] = useState(false);
   const [recommendation, setRecommendation] = useState<any>(null);
 
-  const generateStrategy = () => {
+  const generateStrategy = async () => {
     setLoading(true);
-    // Simulate LangGraph Agent call
-    setTimeout(() => {
-      setRecommendation({
-        strategy: "Focus on commercial plots along the newly announced East-West Metro corridor.",
-        target_areas: ["Vasant Kunj", "Aminabad"],
-        expected_roi: "18-22% p.a.",
-        rationale: "Your moderate risk profile and 50L budget aligns perfectly with pre-construction commercial plots near upcoming metro stations, which historically appreciate significantly once construction breaks ground."
-      });
-      setLoading(false);
+    try {
+      const data = await getInvestmentRecommendation(budget, risk);
+      setRecommendation(data);
       setStep(3);
-    }, 2000);
+    } catch (err) {
+      console.error(err);
+      alert("Failed to generate investment strategy. Please make sure the backend is running.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -116,8 +116,36 @@ export default function InvestmentAssistantPage() {
 
             <div className="mb-8">
               <h3 className="font-bold text-gray-900 mb-2">Agent Rationale</h3>
-              <p className="text-gray-600">{recommendation.rationale}</p>
+              <p className="text-gray-600 leading-relaxed">{recommendation.rationale}</p>
             </div>
+
+            {recommendation.backed_projects && recommendation.backed_projects.length > 0 && (
+              <div className="mb-8">
+                <h3 className="font-bold text-gray-900 mb-3">Backed by Verified Projects & Sources</h3>
+                <div className="space-y-3">
+                  {recommendation.backed_projects.map((proj: any) => (
+                    <div key={proj.id} className="p-4 bg-emerald-50/50 rounded-xl border border-emerald-100/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                      <div>
+                        <h4 className="font-semibold text-gray-900 text-sm">{proj.name}</h4>
+                        {proj.source_title && (
+                          <p className="text-xs text-gray-500 mt-1">Source: {proj.source_title}</p>
+                        )}
+                      </div>
+                      {proj.source_url && (
+                        <a 
+                          href={proj.source_url} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="text-xs font-semibold text-emerald-700 hover:text-emerald-800 underline shrink-0"
+                        >
+                          View Official Document ↗
+                        </a>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
             <div className="flex gap-4">
               <button onClick={() => setStep(1)} className="px-6 py-3 border border-gray-300 rounded-xl font-medium hover:bg-gray-50 transition-colors">
