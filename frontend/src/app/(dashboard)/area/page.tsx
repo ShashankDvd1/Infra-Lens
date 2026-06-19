@@ -4,15 +4,18 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Compass, TrendingUp, MapPin, Search } from "lucide-react";
 import { getAreas } from "@/lib/api";
+import { useCity } from "@/components/providers/CityProvider";
 
 export default function AreaIntelligencePage() {
   const [areas, setAreas] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const { city } = useCity();
 
   useEffect(() => {
     async function loadAreas() {
+      setLoading(true);
       try {
-        const data = await getAreas({ city: "Lucknow" });
+        const data = await getAreas({ city });
         const mapped = (data.items || []).map((a: any) => ({
           id: a.slug,
           name: a.name,
@@ -29,7 +32,7 @@ export default function AreaIntelligencePage() {
       }
     }
     loadAreas();
-  }, []);
+  }, [city]);
 
   return (
     <div className="max-w-6xl mx-auto p-4 md:p-8">

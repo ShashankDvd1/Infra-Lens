@@ -136,6 +136,7 @@ async def seed_data():
                 "reserve_price": 6200000.0,
                 "discount": 27.0,
                 "auction_date": "2026-07-15",
+                "backing_authority": "Union Bank of India",
                 "project_slug": "lucknow-it-city-chak-ganjaria"
             },
             {
@@ -147,7 +148,104 @@ async def seed_data():
                 "reserve_price": 9500000.0,
                 "discount": 21.0,
                 "auction_date": "Immediate",
+                "backing_authority": "Lucknow Development Authority (LDA)",
                 "project_slug": "lucknow-outer-ring-road"
+            },
+            {
+                "title": "Shalimar One World Commercial Shop",
+                "location": "Shaheed Path Corridor, Lucknow",
+                "city": "Lucknow",
+                "property_type": "Bank Auction",
+                "market_value": 6000000.0,
+                "reserve_price": 4500000.0,
+                "discount": 25.0,
+                "auction_date": "2026-08-05",
+                "backing_authority": "State Bank of India (SBI)",
+                "project_slug": "lucknow-outer-ring-road"
+            },
+            {
+                "title": "Sushant Golf City Villa",
+                "location": "Sector C, Sushant Golf City, Lucknow",
+                "city": "Lucknow",
+                "property_type": "Distress Sale",
+                "market_value": 23000000.0,
+                "reserve_price": 18000000.0,
+                "discount": 21.7,
+                "auction_date": "Immediate",
+                "backing_authority": "Ansal API Group",
+                "project_slug": "rishita-mulberry-heights-sushant-golf-city"
+            },
+            {
+                "title": "Premium Office Space, Hinjawadi",
+                "location": "Phase 1, Hinjawadi, Pune",
+                "city": "Pune",
+                "property_type": "Bank Auction",
+                "market_value": 15000000.0,
+                "reserve_price": 11000000.0,
+                "discount": 26.6,
+                "auction_date": "2026-08-01",
+                "backing_authority": "State Bank of India (SBI)",
+                "project_slug": "pune-metro-line-3"
+            },
+            {
+                "title": "Baner Residential Flat",
+                "location": "Near Baner Hill, Baner, Pune",
+                "city": "Pune",
+                "property_type": "Distress Sale",
+                "market_value": 14500000.0,
+                "reserve_price": 11000000.0,
+                "discount": 24.1,
+                "backing_authority": "HDFC Bank",
+                "auction_date": "Immediate",
+                "project_slug": "pune-outer-ring-road-phase-1"
+            },
+            {
+                "title": "Wakad Commercial Shop",
+                "location": "Wakad Main Road, Pune",
+                "city": "Pune",
+                "property_type": "Bank Auction",
+                "market_value": 10500000.0,
+                "reserve_price": 7500000.0,
+                "discount": 28.6,
+                "auction_date": "2026-07-30",
+                "backing_authority": "ICICI Bank Ltd",
+                "project_slug": "pune-metro-line-3"
+            },
+            {
+                "title": "Luxury Villa, Gachibowli",
+                "location": "Near Financial District, Gachibowli, Hyderabad",
+                "city": "Hyderabad",
+                "property_type": "Distress Sale",
+                "market_value": 35000000.0,
+                "reserve_price": 27000000.0,
+                "discount": 22.8,
+                "backing_authority": "Punjab National Bank (PNB)",
+                "auction_date": "Immediate",
+                "project_slug": "hyderabad-metro-phase-2"
+            },
+            {
+                "title": "Madhapur Commercial Space",
+                "location": "HITEC City, Madhapur, Hyderabad",
+                "city": "Hyderabad",
+                "property_type": "Distress Sale",
+                "market_value": 27000000.0,
+                "reserve_price": 21000000.0,
+                "discount": 22.2,
+                "backing_authority": "Hyderabad Metropolitan Development Authority (HMDA)",
+                "auction_date": "Immediate",
+                "project_slug": "hyderabad-metro-phase-2"
+            },
+            {
+                "title": "Kondapur Residential Flat",
+                "location": "Kondapur Main Road, Hyderabad",
+                "city": "Hyderabad",
+                "property_type": "Bank Auction",
+                "market_value": 8500000.0,
+                "reserve_price": 6200000.0,
+                "discount": 27.1,
+                "backing_authority": "Canara Bank",
+                "auction_date": "2026-07-25",
+                "project_slug": "hyderabad-elevated-expressways-kphb-financial-district"
             }
         ]
 
@@ -172,6 +270,7 @@ async def seed_data():
                 reserve_price=dp_data["reserve_price"],
                 discount=dp_data["discount"],
                 auction_date=dp_data["auction_date"],
+                backing_authority=dp_data.get("backing_authority", "Public Sector Bank"),
                 project_id=project_id
             )
             session.add(dp)

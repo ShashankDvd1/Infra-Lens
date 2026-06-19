@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { askAI } from "@/lib/api";
-import { Send, Bot, User, Loader2, Sparkles, MapPin, ExternalLink } from "lucide-react";
+import { Send, Bot, User, Loader2, Sparkles, MapPin, ExternalLink, FileText } from "lucide-react";
 import SourceBadge from "@/components/projects/SourceBadge";
 
 interface Message {
@@ -93,11 +93,23 @@ export default function AskAIPage() {
                 <div className="mt-4 pt-3 border-t border-gray-100">
                   <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Sources Cited</p>
                   <div className="flex flex-wrap gap-2">
-                    {msg.sources.map((src: any, i: number) => (
-                      <a key={i} href={`/projects/${src.project_id}`} className="inline-flex items-center gap-1 px-2 py-1 bg-gray-50 border border-gray-200 rounded text-xs text-gray-600 hover:bg-gray-100">
-                        <FileText className="w-3 h-3" /> {src.project_name}
-                      </a>
-                    ))}
+                    {msg.sources.map((src: any, i: number) => {
+                      const isWeb = !src.project_id && src.url;
+                      const href = isWeb ? src.url : `/projects/${src.project_id}`;
+                      const title = isWeb ? (src.title || src.url) : src.project_name;
+                      return (
+                        <a 
+                          key={i} 
+                          href={href} 
+                          target={isWeb ? "_blank" : undefined} 
+                          rel={isWeb ? "noopener noreferrer" : undefined}
+                          className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-gray-50 border border-gray-200 rounded-lg text-xs text-indigo-600 hover:text-indigo-800 hover:bg-indigo-50 transition-colors"
+                        >
+                          <FileText className="w-3.5 h-3.5 text-gray-400" /> 
+                          <span className="truncate max-w-[200px]">{title}</span>
+                        </a>
+                      );
+                    })}
                   </div>
                 </div>
               )}

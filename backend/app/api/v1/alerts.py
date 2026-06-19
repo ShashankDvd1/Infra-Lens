@@ -1,3 +1,4 @@
+from uuid import UUID
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
@@ -17,7 +18,7 @@ class AlertCreate(BaseModel):
     min_opportunity_score: int | None = None
 
 class AlertResponse(BaseModel):
-    id: str
+    id: UUID
     area_slug: str | None
     project_type: str | None
     min_opportunity_score: int | None

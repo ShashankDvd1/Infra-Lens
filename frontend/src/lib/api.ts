@@ -11,6 +11,7 @@ const API_PREFIX = '/api/v1';
 export async function fetchAPI(endpoint: string, options: RequestInit = {}) {
   const url = `${API_URL}${API_PREFIX}${endpoint}`;
   const response = await fetch(url, {
+    cache: 'no-store',
     ...options,
     headers: {
       'Content-Type': 'application/json',
@@ -96,6 +97,40 @@ export const getAreas = (params?: { city?: string; page?: number }) => {
   return fetchAPI(`/areas${queryString}`);
 };
 
-export const getDistressProperties = () => {
-  return fetchAPI(`/distress`);
+export const getDistressProperties = (params?: { city?: string }) => {
+  const queryParams = new URLSearchParams();
+  if (params?.city) queryParams.append('city', params.city);
+  const queryString = queryParams.toString() ? `?${queryParams.toString()}` : '';
+  return fetchAPI(`/distress${queryString}`);
+};
+
+export const scanDistressProperties = (city: string) => {
+  return fetchAPI(`/distress/scan?city=${encodeURIComponent(city)}`, {
+    method: 'POST',
+  });
+};
+
+
+export const getAlerts = (token: string) => {
+  return fetchAPI(`/alerts`, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+};
+
+export const createAlert = (
+  alert: { area_slug?: string; project_type?: string; min_opportunity_score?: number },
+  token: string
+) => {
+  return fetchAPI(`/alerts`, {
+    method: 'POST',
+    body: JSON.stringify(alert),
+    headers: { Authorization: `Bearer ${token}` },
+  });
+};
+
+export const deleteAlert = (alertId: string, token: string) => {
+  return fetchAPI(`/alerts/${alertId}`, {
+    method: 'DELETE',
+    headers: { Authorization: `Bearer ${token}` },
+  });
 };

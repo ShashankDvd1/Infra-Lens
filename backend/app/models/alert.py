@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, DateTime, ForeignKey, Text
+from sqlalchemy import Column, String, DateTime, ForeignKey, Text, Integer, Boolean
 from sqlalchemy.orm import relationship
 from sqlalchemy.dialects.postgresql import UUID
 from datetime import datetime
@@ -15,6 +15,8 @@ class AlertSubscription(Base):
     # Alert criteria
     area_slug = Column(String, nullable=True) # E.g., 'gomti-nagar'
     project_type = Column(String, nullable=True) # E.g., 'commercial'
+    min_opportunity_score = Column(Integer, nullable=True, default=0)
+    is_active = Column(Boolean, nullable=False, default=True)
     
     created_at = Column(DateTime, default=datetime.utcnow)
 

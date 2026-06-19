@@ -14,10 +14,12 @@ class AskAIRequest(BaseModel):
 
 
 class CitedSource(BaseModel):
-    project_id: UUID
-    project_name: str
+    project_id: Optional[UUID] = None
+    project_name: Optional[str] = None
     source_url: Optional[str] = None
     relevance_score: float = 0.0
+    title: Optional[str] = None
+    url: Optional[str] = None
 
 
 class RecommendedArea(BaseModel):

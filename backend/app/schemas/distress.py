@@ -13,6 +13,7 @@ class DistressPropertyResponse(BaseModel):
     reserve_price: float
     discount: float
     auction_date: Optional[str] = None
+    backing_authority: Optional[str] = None
     project_id: Optional[UUID] = None
 
     class Config:

@@ -17,6 +17,7 @@ class DistressProperty(Base):
     reserve_price = Column(Float, nullable=False)
     discount = Column(Float, nullable=False)
     auction_date = Column(String(100), nullable=True)
+    backing_authority = Column(String(200), nullable=True)
     project_id = Column(UUID(as_uuid=True), ForeignKey("projects.id", ondelete="SET NULL"), nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow)
 

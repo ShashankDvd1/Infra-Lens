@@ -1,4 +1,7 @@
+"use client";
+
 import Sidebar from "@/components/common/Sidebar";
+import { CityProvider } from "@/components/providers/CityProvider";
 
 export default function DashboardLayout({
   children,
@@ -6,14 +9,16 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex min-h-screen bg-gray-50">
-      <Sidebar />
-      <div className="flex-1 ml-64">
-        {/* Simple top header could go here if needed, but for now just the content */}
-        <main className="w-full h-full">
-          {children}
-        </main>
+    <CityProvider>
+      <div className="flex min-h-screen bg-gray-50">
+        <Sidebar />
+        <div className="flex-1 ml-64">
+          {/* Simple top header could go here if needed, but for now just the content */}
+          <main className="w-full h-full">
+            {children}
+          </main>
+        </div>
       </div>
-    </div>
+    </CityProvider>
   );
 }

@@ -549,6 +549,214 @@ SEED_PROJECTS = [
                 "content_text": "The Kalyan Singh Super Specialty Cancer Institute at CG City spans 100 acres and offers top-tier oncology research and treatment services."
             }
         ]
+    },
+    {
+        "name": "Pune Metro Line 3 — Hinjawadi to Shivajinagar",
+        "slug": "pune-metro-line-3",
+        "project_type": "metro",
+        "status": "under_construction",
+        "description": "23 km elevated metro line connecting Hinjawadi IT Hub to Shivajinagar, containing 23 stations. This public-private partnership project aims to drastically reduce commuter times and traffic along the IT corridor.",
+        "latitude": 18.5913,
+        "longitude": 73.7389,
+        "city": "Pune",
+        "district": "Pune",
+        "authority": "PMRDA",
+        "announced_date": "2020-03-01",
+        "expected_completion": "2027-03-31",
+        "budget_crore": 8300.0,
+        "impact_radius_km": 4.0,
+        "sources": [
+            {
+                "source_type": "authority_website",
+                "title": "PMRDA — Pune Metro Line 3 Project Specifications",
+                "url": "https://www.pmrda.gov.in/metro-line-3.aspx",
+                "authority_name": "PMRDA",
+                "published_date": "2020-03-01",
+                "content_text": "PMRDA Metro Line 3 connects Hinjawadi to Shivajinagar. It is a Public Private Partnership (PPP) model implemented by Tata Group and Siemens. It features 23 elevated stations covering 23 km."
+            }
+        ]
+    },
+    {
+        "name": "Pune Outer Ring Road — Phase 1",
+        "slug": "pune-ring-road-phase-1",
+        "project_type": "ring_road",
+        "status": "approved",
+        "description": "A 128 km circular ring road encircling Pune and Pimpri-Chinchwad, designed to redirect heavy transit traffic around the urban core and connect the city's growth hubs.",
+        "latitude": 18.6500,
+        "longitude": 73.7600,
+        "city": "Pune",
+        "district": "Pune",
+        "authority": "MSRDC",
+        "announced_date": "2021-06-15",
+        "expected_completion": "2028-12-31",
+        "budget_crore": 17400.0,
+        "impact_radius_km": 6.0,
+        "sources": [
+            {
+                "source_type": "government_notification",
+                "title": "MSRDC — Pune Ring Road Alignment Approved",
+                "url": "https://msrdc.in/pune-ring-road",
+                "authority_name": "MSRDC",
+                "published_date": "2021-06-15",
+                "content_text": "MSRDC has finalized the alignment for the Pune Outer Ring Road. Phase 1 will connect Urse on the Pune-Mumbai Expressway to Solapur Road. Total length is 128 km."
+            }
+        ]
+    },
+    {
+        "name": "Hyderabad Metro Phase 2 — Raidurg to RGIA Airport",
+        "slug": "hyderabad-metro-phase-2",
+        "project_type": "metro",
+        "status": "approved",
+        "description": "Extension of the Hyderabad Metro Rail corridor from Raidurg to Rajiv Gandhi International Airport in Shamshabad, spanning 31 km to offer seamless airport express connectivity.",
+        "latitude": 17.4400,
+        "longitude": 78.3480,
+        "city": "Hyderabad",
+        "district": "Hyderabad",
+        "authority": "HMRL",
+        "announced_date": "2022-12-01",
+        "expected_completion": "2028-06-30",
+        "budget_crore": 8400.0,
+        "impact_radius_km": 5.0,
+        "sources": [
+            {
+                "source_type": "authority_website",
+                "title": "HMRL — Airport Express Line details",
+                "url": "https://hmrl.co.in/airport-express",
+                "authority_name": "HMRL",
+                "published_date": "2022-12-01",
+                "content_text": "Hyderabad Metro Phase 2 Airport Express will connect Raidurg Metro Station to Rajiv Gandhi International Airport. The 31 km route will run via Outer Ring Road (ORR) and will include elevated and underground stations."
+            }
+        ]
+    },
+    {
+        "name": "Hyderabad Regional Ring Road (RRR) — Northern Arc",
+        "slug": "hyderabad-regional-ring-road",
+        "project_type": "ring_road",
+        "status": "approved",
+        "description": "A massive 340 km regional ring road encircling Hyderabad city beyond the Outer Ring Road (ORR), designed to connect districts and towns around Hyderabad.",
+        "latitude": 17.6500,
+        "longitude": 78.4500,
+        "city": "Hyderabad",
+        "district": "Hyderabad",
+        "authority": "NHAI",
+        "announced_date": "2021-02-10",
+        "expected_completion": "2029-12-31",
+        "budget_crore": 20000.0,
+        "impact_radius_km": 8.0,
+        "sources": [
+            {
+                "source_type": "government_notification",
+                "title": "NHAI — Hyderabad RRR Northern Arc NH Status",
+                "url": "https://nhai.gov.in/hyderabad-rrr",
+                "authority_name": "NHAI",
+                "published_date": "2021-02-10",
+                "content_text": "The Ministry of Road Transport and Highways has declared the Northern Arc of the Hyderabad Regional Ring Road (RRR) as a National Highway. The project is a 340 km access controlled highway."
+            }
+        ]
+    },
+    {
+        "name": "Pune Metro Line 4 — Shivajinagar to Loni Kalbhor",
+        "slug": "pune-metro-line-4",
+        "project_type": "metro",
+        "status": "announced",
+        "description": "Proposed extension of the Pune Metro network connecting Shivajinagar to Loni Kalbhor. This 19 km line will serve eastern suburbs and is currently in the planning stage.",
+        "latitude": 18.5204,
+        "longitude": 73.8567,
+        "city": "Pune",
+        "district": "Pune",
+        "authority": "PMRDA",
+        "announced_date": "2024-01-10",
+        "expected_completion": "2030-12-31",
+        "budget_crore": 4500.0,
+        "impact_radius_km": 3.0,
+        "sources": [
+            {
+                "source_type": "authority_website",
+                "title": "PMRDA — Metro Line 4 DPR Under Review",
+                "url": "https://www.pmrda.gov.in/metro-line-4-dpr.aspx",
+                "authority_name": "PMRDA",
+                "published_date": "2024-01-10",
+                "content_text": "PMRDA has prepared the DPR for Metro Line 4 connecting Shivajinagar to Loni Kalbhor. The project is proposed for state cabinet approval."
+            }
+        ]
+    },
+    {
+        "name": "Pune High Capacity Mass Transit Route (HCMTR)",
+        "slug": "pune-hcmtr",
+        "project_type": "ring_road",
+        "status": "on_hold",
+        "description": "A 36 km elevated ring road project designed to ease traffic inside Pune city limits. The project has been put on hold due to land acquisition challenges and environmental opposition.",
+        "latitude": 18.5300,
+        "longitude": 73.8400,
+        "city": "Pune",
+        "district": "Pune",
+        "authority": "PMC",
+        "announced_date": "2018-02-15",
+        "expected_completion": "2029-06-30",
+        "budget_crore": 5200.0,
+        "impact_radius_km": 5.0,
+        "sources": [
+            {
+                "source_type": "government_notification",
+                "title": "PMC — HCMTR Project Status Report",
+                "url": "https://pmc.gov.in/hcmtr-status",
+                "authority_name": "PMC",
+                "published_date": "2022-09-20",
+                "content_text": "The HCMTR project is currently put on hold following environmental concerns and revisions to the DPR. Land acquisition is suspended."
+            }
+        ]
+    },
+    {
+        "name": "Hyderabad Metro Phase 2 — BHEL to Lakdikapul Corridor",
+        "slug": "hyderabad-metro-bhel-lakdikapul",
+        "project_type": "metro",
+        "status": "announced",
+        "description": "Proposed 26 km metro corridor under Phase 2 connecting BHEL to Lakdikapul via Gachibowli and Madhapur, facilitating daily transit for IT sector employees.",
+        "latitude": 17.4800,
+        "longitude": 78.3000,
+        "city": "Hyderabad",
+        "district": "Hyderabad",
+        "authority": "HMRL",
+        "announced_date": "2023-11-15",
+        "expected_completion": "2030-06-30",
+        "budget_crore": 5800.0,
+        "impact_radius_km": 4.0,
+        "sources": [
+            {
+                "source_type": "authority_website",
+                "title": "HMRL — Phase 2 Corridor DPR Details",
+                "url": "https://hmrl.co.in/phase2-corridors",
+                "authority_name": "HMRL",
+                "published_date": "2023-11-15",
+                "content_text": "DPR for the BHEL to Lakdikapul metro route is submitted to the Central Government for joint venture funding approval."
+            }
+        ]
+    },
+    {
+        "name": "Hyderabad Elevated Expressways (KPHB to Financial District)",
+        "slug": "hyderabad-elevated-expressway",
+        "project_type": "expressway",
+        "status": "on_hold",
+        "description": "A proposed elevated corridor to bypass traffic between Kukatpally (KPHB) and the Financial District. Temporarily on hold pending cost-benefit analysis and alternative metro alignments.",
+        "latitude": 17.4600,
+        "longitude": 78.3600,
+        "city": "Hyderabad",
+        "district": "Hyderabad",
+        "authority": "HMDA",
+        "announced_date": "2021-08-10",
+        "expected_completion": "2028-12-31",
+        "budget_crore": 2500.0,
+        "impact_radius_km": 3.0,
+        "sources": [
+            {
+                "source_type": "news_article",
+                "title": "HMDA puts KPHB-Financial District expressway on hold",
+                "url": "https://telanganatoday.com/hmda-expressway-on-hold",
+                "authority_name": "Telangana Today",
+                "published_date": "2023-05-12",
+                "content_text": "HMDA has paused the proposed elevated corridor project connecting KPHB and Financial District to avoid overlap with upcoming metro line changes."
+            }
+        ]
     }
 ]
 
@@ -654,4 +862,84 @@ SEED_AREAS = [
             {"indicator_type": "avg_price_sqft", "value": 3200, "unit": "₹/sqft", "measured_date": "2024-06-01"},
         ]
     },
+    {
+        "name": "Hinjawadi",
+        "slug": "hinjawadi",
+        "city": "Pune",
+        "latitude": 18.5913,
+        "longitude": 73.7389,
+        "avg_price_sqft": 8000.0,
+        "growth_rate_pct": 14.5,
+        "description": "Major IT cluster and tech park in Pune. Houses hundreds of IT companies. Highly sought after by professionals, now benefiting from Metro Line 3.",
+        "connectivity_data": {
+            "metro_stations": ["Hinjawadi Phase 1", "Hinjawadi Phase 2", "Hinjawadi Phase 3"],
+            "distance_to_airport_km": 24,
+            "major_roads": ["Pune-Mumbai Expressway", "Hinjawadi Main Road"],
+        },
+        "growth_indicators": [
+            {"indicator_type": "price_appreciation", "value": 14.5, "unit": "%/year", "measured_date": "2024-06-01"},
+            {"indicator_type": "project_count", "value": 2, "unit": "count", "measured_date": "2024-06-01"},
+            {"indicator_type": "avg_price_sqft", "value": 8000, "unit": "₹/sqft", "measured_date": "2024-06-01"},
+        ]
+    },
+    {
+        "name": "Baner",
+        "slug": "baner",
+        "city": "Pune",
+        "latitude": 18.5590,
+        "longitude": 73.7797,
+        "avg_price_sqft": 9500.0,
+        "growth_rate_pct": 11.2,
+        "description": "Premium residential and commercial suburb in western Pune. Known for high-end apartments, popular restaurants, and proximity to Hinjawadi IT Park.",
+        "connectivity_data": {
+            "metro_stations": ["Baner Road"],
+            "distance_to_airport_km": 18,
+            "major_roads": ["Baner Road", "Mumbai-Bangalore Highway"],
+        },
+        "growth_indicators": [
+            {"indicator_type": "price_appreciation", "value": 11.2, "unit": "%/year", "measured_date": "2024-06-01"},
+            {"indicator_type": "project_count", "value": 2, "unit": "count", "measured_date": "2024-06-01"},
+            {"indicator_type": "avg_price_sqft", "value": 9500, "unit": "₹/sqft", "measured_date": "2024-06-01"},
+        ]
+    },
+    {
+        "name": "Gachibowli",
+        "slug": "gachibowli",
+        "city": "Hyderabad",
+        "latitude": 17.4400,
+        "longitude": 78.3480,
+        "avg_price_sqft": 9000.0,
+        "growth_rate_pct": 16.5,
+        "description": "Major IT and financial hub in Hyderabad. Home to Microsoft, Infosys, and international financial institutions. Extremely high commercial and residential demand.",
+        "connectivity_data": {
+            "metro_stations": ["Gachibowli Stadium"],
+            "distance_to_airport_km": 30,
+            "major_roads": ["Outer Ring Road (ORR)", "Gachibowli-Miyapur Road"],
+        },
+        "growth_indicators": [
+            {"indicator_type": "price_appreciation", "value": 16.5, "unit": "%/year", "measured_date": "2024-06-01"},
+            {"indicator_type": "project_count", "value": 2, "unit": "count", "measured_date": "2024-06-01"},
+            {"indicator_type": "avg_price_sqft", "value": 9000, "unit": "₹/sqft", "measured_date": "2024-06-01"},
+        ]
+    },
+    {
+        "name": "Madhapur",
+        "slug": "madhapur",
+        "city": "Hyderabad",
+        "latitude": 17.4483,
+        "longitude": 78.3915,
+        "avg_price_sqft": 10500.0,
+        "growth_rate_pct": 13.0,
+        "description": "The heart of Hyderabad's IT industry, featuring HITEC City. Highly developed urban cluster with commercial offices, hotels, malls, and premium residences.",
+        "connectivity_data": {
+            "metro_stations": ["HITEC City", "Madhapur"],
+            "distance_to_airport_km": 34,
+            "major_roads": ["Madhapur Main Road", "HITEC City Road"],
+        },
+        "growth_indicators": [
+            {"indicator_type": "price_appreciation", "value": 13.0, "unit": "%/year", "measured_date": "2024-06-01"},
+            {"indicator_type": "project_count", "value": 2, "unit": "count", "measured_date": "2024-06-01"},
+            {"indicator_type": "avg_price_sqft", "value": 10500, "unit": "₹/sqft", "measured_date": "2024-06-01"},
+        ]
+    }
 ]

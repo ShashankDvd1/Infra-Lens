@@ -15,6 +15,15 @@ L.Icon.Default.mergeOptions({
 
 interface MapComponentProps {
   geojsonData: any;
+  center?: [number, number];
+}
+
+function ChangeMapView({ center }: { center: [number, number] }) {
+  const map = useMap();
+  useEffect(() => {
+    map.setView(center, 11);
+  }, [center, map]);
+  return null;
 }
 
 // Custom icon creator using the emoji and color
@@ -30,15 +39,19 @@ const createCustomIcon = (emoji: string, color: string) => {
   });
 };
 
-export default function MapComponent({ geojsonData }: MapComponentProps) {
+export default function MapComponent({ geojsonData, center }: MapComponentProps) {
   const defaultCenter: [number, number] = [26.8467, 80.9462]; // Lucknow
+  const activeCenter = center || defaultCenter;
+  const mapKey = `${activeCenter[0]}-${activeCenter[1]}`;
 
   return (
     <MapContainer 
-      center={defaultCenter} 
+      key={mapKey}
+      center={activeCenter} 
       zoom={11} 
       style={{ height: "100%", width: "100%", zIndex: 1 }}
     >
+      <ChangeMapView center={activeCenter} />
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

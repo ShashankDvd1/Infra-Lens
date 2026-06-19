@@ -1,11 +1,35 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
+
 import { usePathname } from "next/navigation";
 import { Map, List, MessageSquare, Compass, Bookmark, AlertTriangle, TrendingUp, FolderKanban } from "lucide-react";
+import { useCity } from "@/components/providers/CityProvider";
 
 export default function Sidebar() {
   const pathname = usePathname();
+  const { city, cityName, setCity } = useCity();
+  const [projectCount, setProjectCount] = useState<number | null>(null);
+
+  useEffect(() => {
+    let active = true;
+    async function fetchCount() {
+      try {
+        const { getProjects } = await import("@/lib/api");
+        const data = await getProjects({ city });
+        if (active) {
+          setProjectCount(data.total || 0);
+        }
+      } catch (e) {
+        console.error("Failed to fetch project count for sidebar:", e);
+      }
+    }
+    fetchCount();
+    return () => {
+      active = false;
+    };
+  }, [city]);
 
   const navItems = [
     { name: "Infrastructure Map", href: "/map", icon: Map },
@@ -28,7 +52,11 @@ export default function Sidebar() {
 
       <div className="px-6 py-4 border-b border-gray-100">
         <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">City Focus</label>
-        <select className="w-full bg-gray-50 border border-gray-200 text-gray-900 rounded-lg p-2 text-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+        <select 
+          value={city}
+          onChange={(e) => setCity(e.target.value as any)}
+          className="w-full bg-gray-50 border border-gray-200 text-gray-900 rounded-lg p-2 text-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none"
+        >
           <option value="lucknow">Lucknow, UP</option>
           <option value="pune">Pune, MH</option>
           <option value="hyderabad">Hyderabad, TS</option>
@@ -59,13 +87,19 @@ export default function Sidebar() {
 
       <div className="p-4 border-t border-gray-800">
         <div className="bg-gray-800 rounded-lg p-4 text-center">
-          <p className="text-xs text-gray-400 mb-2">Lucknow MVP</p>
+          <p className="text-xs text-gray-400 mb-2">{cityName} Coverage</p>
           <div className="w-full bg-gray-700 rounded-full h-1.5 mb-1">
-            <div className="bg-emerald-500 h-1.5 rounded-full" style={{ width: '45%' }}></div>
+            <div 
+              className="bg-emerald-500 h-1.5 rounded-full transition-all duration-500" 
+              style={{ width: `${projectCount !== null ? Math.min(100, Math.max(10, Math.round((projectCount / 20) * 100))) : 0}%` }}
+            ></div>
           </div>
-          <p className="text-[10px] text-gray-500 uppercase">20 Projects Tracked</p>
+          <p className="text-[10px] text-gray-500 uppercase">
+            {projectCount !== null ? `${projectCount} Projects Tracked` : "Loading..."}
+          </p>
         </div>
       </div>
     </div>
   );
 }
+

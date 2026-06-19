@@ -13,16 +13,19 @@ const Map = dynamic(
   }
 );
 
+import { useCity } from "@/components/providers/CityProvider";
+
 export default function MapPage() {
   const [markers, setMarkers] = useState<any>(null);
   const [projectType, setProjectType] = useState("");
   const [status, setStatus] = useState("");
+  const { city, cityName, cityCenter } = useCity();
 
   useEffect(() => {
     async function loadMarkers() {
       setMarkers(null);
       try {
-        const params: any = {};
+        const params: any = { city };
         if (projectType) params.project_type = projectType;
         if (status) params.status = status;
         const data = await getMapMarkers(params);
@@ -32,13 +35,13 @@ export default function MapPage() {
       }
     }
     loadMarkers();
-  }, [projectType, status]);
+  }, [city, projectType, status]);
 
   return (
     <div className="flex h-screen w-full flex-col md:flex-row">
       <div className="w-full md:w-1/4 h-1/3 md:h-full bg-white p-4 overflow-y-auto border-r border-gray-200">
         <h1 className="text-2xl font-bold mb-4">Infrastructure Map</h1>
-        <p className="text-gray-600 mb-4">Explore major infrastructure projects across Lucknow.</p>
+        <p className="text-gray-600 mb-4">Explore major infrastructure projects across {cityName}.</p>
         
         {/* Filters */}
         <div className="mb-4">
@@ -65,7 +68,7 @@ export default function MapPage() {
               onChange={(e) => setStatus(e.target.value)}
             >
               <option value="">All Statuses</option>
-              <option value="proposed">Proposed</option>
+              <option value="announced">Proposed</option>
               <option value="approved">Approved</option>
               <option value="under_construction">Under Construction</option>
               <option value="completed">Completed</option>
@@ -93,7 +96,7 @@ export default function MapPage() {
       </div>
       
       <div className="w-full md:w-3/4 h-2/3 md:h-full relative">
-        <Map geojsonData={markers} />
+        <Map geojsonData={markers} center={cityCenter} />
       </div>
     </div>
   );
